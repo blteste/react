@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "vite",
     "start": "vite",
+    
     "serve": "vite preview",
-    "build": "tsc -b && vite build",
+    "build": "prisma generate && tsc -b && vite build",
     "lint": "eslint .",
     "proxy": "http://localhost:3000",
     "preview": "vite preview"

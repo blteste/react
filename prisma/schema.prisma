@@ -1,0 +1,93 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                 Int                @id @default(autoincrement())
+  name               String
+  email              String             @unique
+  password           String
+  birthDate          DateTime
+  pin                String?
+  isAdmin            Boolean            @default(false)
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+  phoneNumber        String? // Novo campo adicionado
+  cars               Car[]              @relation("UserCars")
+  favorites          Favorite[]         @relation("UserFavorites")
+  dono               Boolean            @default(false)
+  resetarSenha       String? // Adicionando o campo
+  resetarSenhaTempo  Int?
+  messagesSent       Message[]          @relation("SentMessages")
+  messagesReceived   Message[]          @relation("ReceivedMessages")
+  conversations      UserConversation[] @relation("UserConversationsUser") // Manter a relação com o nome correto
+  otherConversations UserConversation[] @relation("UserConversationsOtherUser") // Adicionando a relação oposta para `otherUser`
+}
+
+model Message {
+  id         Int      @id @default(autoincrement())
+  content    String
+  senderId   Int
+  receiverId Int
+  sender     User     @relation("SentMessages", fields: [senderId], references: [id])
+  receiver   User     @relation("ReceivedMessages", fields: [receiverId], references: [id])
+  createdAt  DateTime @default(now())
+}
+
+model UserConversation {
+  id             Int      @id @default(autoincrement())
+  userId         Int
+  otherUserId    Int
+  lastMessage    DateTime
+  unreadMessages Int      @default(0)
+  user           User     @relation("UserConversationsUser", fields: [userId], references: [id])
+  otherUser      User     @relation("UserConversationsOtherUser", fields: [otherUserId], references: [id])
+
+  @@unique([userId, otherUserId]) // Garantir que a conversa entre dois Utilizador seja única
+}
+
+model Car {
+  id          Int        @id @default(autoincrement())
+  brand       String
+  model       String
+  year        Int
+  price       Float
+  description String
+  status      String
+  userId      Int
+  type        String?
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  km          Int?
+  city        String?
+  cor         String?
+  user        User       @relation("UserCars", fields: [userId], references: [id])
+  images      Image[]    @relation("CarImages")
+  favorites   Favorite[] @relation("CarFavorites")
+}
+
+model Image {
+  id        Int      @id @default(autoincrement())
+  carId     Int
+  url       String
+  name      String // Novo campo 'name' adicionado
+  createdAt DateTime @default(now())
+
+  car Car @relation("CarImages", fields: [carId], references: [id])
+}
+
+model Favorite {
+  id     Int @id @default(autoincrement())
+  userId Int
+  carId  Int
+
+  user User @relation("UserFavorites", fields: [userId], references: [id])
+  car  Car  @relation("CarFavorites", fields: [carId], references: [id])
+
+  @@unique([userId, carId])
+}

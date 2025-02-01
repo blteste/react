@@ -11,11 +11,13 @@ import { Op } from 'sequelize';  // Importa o Op
 import { z }  from 'zod'; // Zod para validação
 
 import dotenv from 'dotenv';
+dotenv.config(); // Carrega as variáveis de ambiente do arquivo .env
 
+const port = process.env.PORT || 3000;
 
 
 import { Message , User } from './message.js'; // Importando Message e User
-dotenv.config();  // Para carregar as variáveis de ambiente
+
 
 // Configuração do Sequelize com a URL do banco de dados
 

@@ -83,7 +83,7 @@ const [message, setMessage] = useState<{ type: "error" | "success"; text: string
           <div className="space-y-[48px] max-w-md text-center">
             <div className="flex items-center justify-center">
             <div className="w-[83px] h-[63px] bg-[#4C62F0] rounded-[25px] mr-[20px] flex justify-center items-center">
-  <img src="../public/icons/network.png" />
+  <img src="icons/network.png" />
 </div>
 
 <div className="ml-[10px]">
@@ -103,7 +103,7 @@ const [message, setMessage] = useState<{ type: "error" | "success"; text: string
 
             <div className="flex items-center justify-center">
             <div className="w-[83px] h-[63px] bg-[#4C62F0] rounded-[25px] mr-[20px] flex justify-center items-center">
-  <img src="../public/icons/company.png" />
+  <img src="icons/company.png" />
 </div>
 
 <div className="ml-[10px]">
@@ -120,7 +120,7 @@ const [message, setMessage] = useState<{ type: "error" | "success"; text: string
 
             <div className="flex items-center justify-center">
             <div className="w-[83px] h-[63px] bg-[#4C62F0] rounded-[25px] mr-[20px] flex justify-center items-center">
-  <img src="../public/icons/car.png" />
+  <img src="icons/car.png" />
 </div>
 
               <div className="ml-[10px]">

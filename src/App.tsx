@@ -166,12 +166,12 @@ export default function Teste() {
   };
   
   const cars = [
-    { id: 1, name: "Porsche 911 Turbo", year: 2020, km: "12.500", price: "€120.000", img: "../public/Cards/p911.jpg", onClick: () => handleGoTo911turbo() },
-    { id: 2, name: "Porsche Cayenne S", year: 2019, km: "25.000", price: "€85.000", img: "../public/Cards/pcays.jpg", onClick: () => handleGoTo2() },
-    { id: 3, name: "Porsche Panamera 4", year: 2021, km: "8.000", price: "€110.000", img: "../public/Cards/pp4.jpg", onClick: () => handleGoTo3() },
-    { id: 4, name: "Porsche 718 Boxster", year: 2020, km: "15.000", price: "€75.000", img: "../public/Cards/p718.webp", onClick: () => handleGoTo4() },
-    { id: 5, name: "Porsche Macan Turbo", year: 2021, km: "5.000", price: "€95.000", img: "../public/Cards/pmt.avif", onClick: () => handleGoTo5() },
-    { id: 6, name: "Porsche 911 Carrera", year: 2021, km: "5.000", price: "€95.000", img: "../public/Cards/p991c.jpg", onClick: () => handleGoTo6() },
+    { id: 1, name: "Porsche 911 Turbo", year: 2020, km: "12.500", price: "€120.000", img: "Cards/p911.jpg", onClick: () => handleGoTo911turbo() },
+    { id: 2, name: "Porsche Cayenne S", year: 2019, km: "25.000", price: "€85.000", img: "Cards/pcays.jpg", onClick: () => handleGoTo2() },
+    { id: 3, name: "Porsche Panamera 4", year: 2021, km: "8.000", price: "€110.000", img: "Cards/pp4.jpg", onClick: () => handleGoTo3() },
+    { id: 4, name: "Porsche 718 Boxster", year: 2020, km: "15.000", price: "€75.000", img: "Cards/p718.webp", onClick: () => handleGoTo4() },
+    { id: 5, name: "Porsche Macan Turbo", year: 2021, km: "5.000", price: "€95.000", img: "Cards/pmt.avif", onClick: () => handleGoTo5() },
+    { id: 6, name: "Porsche 911 Carrera", year: 2021, km: "5.000", price: "€95.000", img: "Cards/p991c.jpg", onClick: () => handleGoTo6() },
   ];
 
   return (
@@ -182,7 +182,7 @@ export default function Teste() {
       <div className="relative w-full h-[120vh] overflow-hidden">
   <div className="relative w-full h-full overflow-hidden flex items-center justify-center">
     <img
-      src="../public/Fundo/porsche.png"
+      src="Fundo/porsche.png"
       alt="Fundo Página Inicial Porsche"
       className="object-cover w-full h-full absolute inset-0"
     />
@@ -388,7 +388,7 @@ export default function Teste() {
 
     <div className="flex flex-col items-center cursor-pointer mb-12 transform transition-transform duration-300 hover:scale-105 lg:ml-[110px]">
       <div className="w-[336px] h-[383px] bg-white rounded-[20px] shadow-2xl flex flex-col items-center justify-center overflow-hidden transform transition-transform duration-300 hover:scale-105">
-        <img src="../public/Cards/Group1.png" alt="Carros" className="w-full h-full object-cover rounded-[20px]" />
+        <img src="Cards/Group1.png" alt="Carros" className="w-full h-full object-cover rounded-[20px]" />
       </div>
       <button onClick={handleGoToCars} className="mt-6 px-6 py-3 bg-[#0022FF] text-white text-lg font-semibold rounded-full shadow-lg hover:shadow-2xl transform transition-transform duration-300 hover:scale-105">
         
@@ -398,7 +398,7 @@ export default function Teste() {
 
     <div className="flex flex-col items-center cursor-pointer mb-12 transform transition-transform duration-300 hover:scale-105">
       <div className="w-[336px] h-[383px] bg-white rounded-[20px] shadow-2xl flex flex-col items-center justify-center overflow-hidden transform transition-transform duration-300 hover:scale-105">
-        <img src="../public/Cards/Group2.png" alt="Motas" className="w-full h-full object-cover rounded-[20px]" />
+        <img src="Cards/Group2.png" alt="Motas" className="w-full h-full object-cover rounded-[20px]" />
       </div>
       <button onClick={handleGoToMota} className="mt-6 px-6 py-3 bg-[#0022FF] text-white text-lg font-semibold rounded-full shadow-lg hover:shadow-2xl transform transition-transform duration-300 hover:scale-105">
         MOTAS
@@ -407,7 +407,7 @@ export default function Teste() {
 
     <div className="flex flex-col items-center cursor-pointer mb-12 transform transition-transform duration-300 hover:scale-105 lg:mr-[110px]">
       <div className="w-[336px] h-[383px] bg-white rounded-[20px] shadow-2xl flex flex-col items-center justify-center overflow-hidden transform transition-transform duration-300 hover:scale-105">
-        <img src="../public/Cards/Group3.png" alt="Carrinhas" className="w-full h-full object-cover rounded-[20px]" />
+        <img src="Cards/Group3.png" alt="Carrinhas" className="w-full h-full object-cover rounded-[20px]" />
       </div>
       <button onClick={handleGoToCarrinha} className="mt-6 px-6 py-3 bg-[#0022FF] text-white text-lg font-semibold rounded-full shadow-lg hover:shadow-2xl transform transition-transform duration-300 hover:scale-105">
         CARRINHAS
@@ -553,42 +553,42 @@ export default function Teste() {
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
       {/* Card 1 */}
       <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl animate__animated animate__fadeIn">
-        <img src="../public/Recentes/1.jpg" alt="Carro 1" className="w-full h-40 object-cover" />
+        <img src="Recentes/1.jpg" alt="Carro 1" className="w-full h-40 object-cover" />
       </div>
       {/* Outros cards */}
       <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl animate__animated animate__fadeIn">
-        <img src="../public/Recentes/2.jpg" alt="Carro 2" className="w-full h-40 object-cover" />
+        <img src="Recentes/2.jpg" alt="Carro 2" className="w-full h-40 object-cover" />
       </div>
       <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl animate__animated animate__fadeIn">
-        <img src="../public/Recentes/3.jpg" alt="Carro 3" className="w-full h-40 object-cover" />
+        <img src="Recentes/3.jpg" alt="Carro 3" className="w-full h-40 object-cover" />
       </div>
        {/* Card 4 */}
     <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl animate__animated animate__fadeIn">
-      <img src="../public/Recentes/4.webp" alt="Carro 4" className="w-full h-40 object-cover" />
+      <img src="Recentes/4.webp" alt="Carro 4" className="w-full h-40 object-cover" />
     </div>
     {/* Card 5 */}
     <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl animate__animated animate__fadeIn">
-      <img src="../public/Recentes/5.jpg" alt="Carro 5" className="w-full h-40 object-cover" />
+      <img src="Recentes/5.jpg" alt="Carro 5" className="w-full h-40 object-cover" />
     </div>
     {/* Card 6 */}
     <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl animate__animated animate__fadeIn">
-      <img src="../public/Recentes/6.png" alt="Carro 6" className="w-full h-40 object-cover" />
+      <img src="Recentes/6.png" alt="Carro 6" className="w-full h-40 object-cover" />
     </div>
     {/* Card 7 */}
     <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl animate__animated animate__fadeIn">
-      <img src="../public/Recentes/7.jpg" alt="Carro 7" className="w-full h-40 object-cover" />
+      <img src="Recentes/7.jpg" alt="Carro 7" className="w-full h-40 object-cover" />
     </div>
     {/* Card 8 */}
     <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl animate__animated animate__fadeIn">
-      <img src="../public/Recentes/8.jpg" alt="Carro 8" className="w-full h-40 object-cover" />
+      <img src="Recentes/8.jpg" alt="Carro 8" className="w-full h-40 object-cover" />
     </div>
     {/* Card 9 */}
     <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl animate__animated animate__fadeIn">
-      <img src="../public/Recentes/9.jpg" alt="Carro 9" className="w-full h-40 object-cover" />
+      <img src="Recentes/9.jpg" alt="Carro 9" className="w-full h-40 object-cover" />
     </div>
     {/* Card 10 */}
     <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl animate__animated animate__fadeIn">
-      <img src="../public/Recentes/10.jpg" alt="Carro 10" className="w-full h-40 object-cover" />
+      <img src="Recentes/10.jpg" alt="Carro 10" className="w-full h-40 object-cover" />
     </div>
     </div>
   </div>

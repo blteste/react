@@ -57,7 +57,7 @@ const App: React.FC = () => {
         <div className="space-y-[48px] max-w-md text-center">
           <div className="flex items-center justify-center">
             <div className="w-[83px] h-[63px] bg-[#4C62F0] rounded-[25px] mr-[20px] flex justify-center items-center">
-              <img src="../public/icons/network.png" alt="Segurança" />
+              <img src="icons/network.png" alt="Segurança" />
             </div>
             <div className="ml-[10px]">
               <h3 className="text-xl font-semibold mb-[4px] text-left">Segurança e Privacidade</h3>
@@ -75,7 +75,7 @@ const App: React.FC = () => {
 
           <div className="flex items-center justify-center">
             <div className="w-[83px] h-[63px] bg-[#4C62F0] rounded-[25px] mr-[20px] flex justify-center items-center">
-              <img src="../public/icons/company.png" alt="Empresa de Confiança" />
+              <img src="icons/company.png" alt="Empresa de Confiança" />
             </div>
             <div className="ml-[10px]">
               <h3 className="text-xl font-semibold mb-[4px] text-left">Empresa de Confiança</h3>
@@ -91,7 +91,7 @@ const App: React.FC = () => {
 
           <div className="flex items-center justify-center">
             <div className="w-[83px] h-[63px] bg-[#4C62F0] rounded-[25px] mr-[20px] flex justify-center items-center">
-              <img src="../public/icons/car.png" alt="Experiência" />
+              <img src="icons/car.png" alt="Experiência" />
             </div>
             <div className="ml-[10px]">
               <h3 className="text-xl font-semibold mb-[4px] text-left">Experiência e Qualidade</h3>
